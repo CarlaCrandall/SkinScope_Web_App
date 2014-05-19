@@ -1,0 +1,273 @@
+/*---------------------------------------
+  WEB & ICON FONTS
+---------------------------------------*/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/G2uphNnNqGFMHLRsO_72ngLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/2HG_tEPiQ4Z6795cGfdivLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+
+
+
+/*---------------------------------------
+  GENERAL STYLES
+---------------------------------------*/
+body{
+	background-color: #fff;
+	color: #363636;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+h2{
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+
+/*---------------------------------------
+  HEADER
+---------------------------------------*/
+header{
+	background-color: #363636;
+	color: #fff;
+}
+header.row{margin-bottom: 40px;}
+header h1{
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 50px;
+}
+header h1 a, header h1 a:visited, header h1 a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/*---------------------------------------
+  FOOTER
+---------------------------------------*/
+footer{border-top: 1px solid #ccc;}
+footer a, footer a:visited{color: #363636;}
+footer a:hover{text-decoration: none;}
+footer p{
+	margin-bottom: -5px;
+	color: #363636;
+	font-size: 12px;
+	text-align: center;
+}
+
+
+/*---------------------------------------
+  SIDEBAR STYLES
+---------------------------------------*/
+#sidebar ul{
+	margin: 15px 15px 25px 0;
+	border-top: 1px solid #ccc;
+}
+#sidebar ul li{
+	border: 1px solid #ccc;
+	border-top: 0;
+	font-size: 14px;
+}
+#sidebar ul li.active{background-color: #eee;}
+#sidebar ul li:hover{
+	background-color: #eee;
+	cursor: pointer;
+}
+#sidebar ul li a, #sidebar ul li a:visited, #sidebar ul li a:hover{
+	display: block;
+	padding: 12px 0 12px 12px;
+	color: #363636;
+	text-decoration: none;
+}
+#sidebar ul li.active a{font-weight: 700;}
+
+
+/*---------------------------------------
+  CONTENT STYLES
+---------------------------------------*/
+#content .row{
+	margin: 0px;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+
+
+/*---------------------------------------
+  PRODUCT LIST STYLES
+---------------------------------------*/
+#products{
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	margin-bottom: 50px;
+}
+.product{
+	min-height: 160px;
+	padding: 15px 15px 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;	
+}
+.product.columns{
+	width: 350px !important;
+	margin: 0;
+}
+.product.omega{border-left: 1px solid #ccc;}
+.product-name{
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 26px;
+}
+.product-name a, .product-name a:visited{
+	color: #363636;
+	text-decoration: none;
+}
+.product-brand{
+	color: #666;
+	font-size: 16px;
+	font-weight: 400;
+}
+.product-rating{
+	float: left;
+	width: 105px;
+	height: 40px;
+	margin: 40px 0 0 -15px;
+	padding: 2px 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;	
+	position: absolute;
+	bottom: 15px;
+}
+.product-rating.good{background: transparent url('../images/assets/goodBkg.png') no-repeat center center;}
+.product-rating.average{background: transparent url('../images/assets/averageBkg.png') no-repeat center center;}
+.product-rating.poor{background: transparent url('../images/assets/poorBkg.png') no-repeat center center;}
+.product-rating.unknown{background: transparent url('../images/assets/unknownBkg.png') no-repeat center center;}
+.product-rating span{
+	display: block;
+	padding-left: 15px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 16px;
+}
+.product-rating .rating{
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.product-reviews{
+	float: right;
+	font-size: 16px;
+	position: absolute;
+	bottom: 15px;
+	margin-left: 250px;
+}
+
+
+/*---------------------------------------
+  BUTTON STYLES
+---------------------------------------*/
+a.button, a.button:visited{
+	margin: 15px 15px 15px 0;
+	padding: 10px 12px;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #363636;
+	border: 1px solid #363636;
+	border-radius: 3px;
+	display: block;
+}
+a.button:hover{
+	color: #363636;
+	background-color: #fff;
+}
+a.button-secondary, a.button-secondary:visited{
+	margin-top: 10px;
+	padding: 10px 12px;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+	color: #fff;
+	background-color: #858A8F;
+	border: 1px solid #858A8F;
+	border-radius: 3px;
+}
+a.button-secondary:hover{
+	color: #666;
+	background-color: #fff;
+}
+
+
+
+/*---------------------------------------
+  Design for a width of 768px (tablet)
+---------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+	
+
+}
+
+
+
+/*-------------------------------------------------
+  Design for a width of 480px (mobile landscape)
+-------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	
+
+}
+
+
+
+/*---------------------------------------
+  Design for a width of 320px (mobile)
+---------------------------------------*/
+@media only screen and (max-width: 479px) {
+	
+	
+	
+}
