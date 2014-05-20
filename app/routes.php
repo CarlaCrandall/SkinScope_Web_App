@@ -12,10 +12,28 @@
 */
 
 
-//get product(s)
-Route::get("/", [
-    "uses" => "ProductController@showProducts"
+//home redirects to the product list
+Route::get('/', function(){
+    return Redirect::to('/products');
+});
+
+//get product(s) based on criteria
+Route::get('/products', [
+    "uses" => "ProductController@products"
 ]);
+
+//get product by ID
+Route::get("/products/{id}", [
+    "uses" => "ProductController@productById"
+]);
+
+//get product ingredients
+Route::get("/products/{id}/ingredients", [
+    "uses" => "IngredientController@ingredients"
+]);
+
+
+
 
 
 
