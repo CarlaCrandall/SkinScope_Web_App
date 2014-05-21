@@ -32,10 +32,15 @@ Route::get("/products/{id}/ingredients", [
     "uses" => "IngredientController@ingredients"
 ]);
 
+//get ingredient by ID
+Route::get("/products/{productId}/ingredients/{ingredientId}", [
+    "uses" => "IngredientController@ingredientById"
+]);
 
-
-
-
+//get product reviews
+Route::get("/products/{id}/reviews", [
+    "uses" => "ReviewController@reviews"
+]);
 
 
 

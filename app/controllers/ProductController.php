@@ -44,7 +44,7 @@ class ProductController extends api_ProductController {
 	 */
 	public function productById($id)
 	{
-		//call index function of api controller to get products
+		//call product function of api controller to get products
 		$response =  $this->product($id)->getData();
 
 		//if product exists

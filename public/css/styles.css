@@ -60,6 +60,7 @@ h4{
 	font-weight: 400;
 	margin-bottom: 20px;
 }
+strong{font-weight: 700;}
 
 
 /*---------------------------------------
@@ -170,6 +171,36 @@ footer p{
 
 
 /*---------------------------------------
+  RATING STYLES
+---------------------------------------*/
+.rating{
+	width: 105px;
+	height: 40px;
+	padding: 2px 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;	
+	margin: 40px 0;
+}
+.rating.good{background: transparent url('../images/assets/goodBkg.png') no-repeat top left;}
+.rating.average{background: transparent url('../images/assets/averageBkg.png') no-repeat top left;}
+.rating.poor{background: transparent url('../images/assets/poorBkg.png') no-repeat top left;}
+.rating.unknown{background: transparent url('../images/assets/unknownBkg.png') no-repeat top left;}
+.rating span{
+	display: block;
+	padding-left: 15px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 16px;
+}
+.rating .rating-text{
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+/*---------------------------------------
   PRODUCT STYLES
 ---------------------------------------*/
 #product{border-bottom: 1px solid #ccc;}
@@ -179,10 +210,15 @@ footer p{
 	font-weight: 700;
 	line-height: 28px;
 }
+#product .product-name{
+	font-size: 24px;
+	line-height: 32px;
+}
 .product-name a, .product-name a:visited{
 	color: #363636;
 	text-decoration: none;
 }
+.product-name a:hover{text-decoration: underline;}
 .product-brand{
 	color: #666;
 	font-size: 16px;
@@ -212,7 +248,6 @@ footer p{
 #products .row{
 	margin: 0px;
 	border-bottom: 1px solid #ccc;
-	position: relative;
 }
 #products .product{
 	min-height: 180px;
@@ -220,61 +255,186 @@ footer p{
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;	
+	position: relative;
 }
 #products .product.columns{
 	width: 350px !important;
 	margin: 0;
 }
-#products .product.omega{border-left: 1px solid #ccc;}
+#products .product.alpha{border-right: 1px solid #ccc;}
 #products .rating{
 	float: left;
-	margin: 40px 0 0 -15px;
-	position: absolute; bottom: 20px;
+	margin: 40px 0 0 0;
+	position: absolute; bottom: 20px; left: 0;
 }
-#products .product-reviews{
+#products .product-links{
 	float: right;
-	position: absolute; bottom: 20px;
-	margin-left: 250px;
-	font-size: 16px;
+	position: absolute; bottom: 10px; right: 20px;
+	text-align: right;
+	font-size: 14px;
 }
-#products .product-reviews a, #products .product-reviews a:visited{color: #777;}
+.product-links p{margin: 11px 0;}
+#products .product-links a, #products .product-links a:visited{color: #777;}
+
 
 
 /*---------------------------------------
-  RATING STYLES
+  INGREDIENT PAGE STYLES
 ---------------------------------------*/
-.rating{
-	width: 105px;
-	height: 40px;
-	padding: 2px 0;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;	
-	margin: 40px 0;
-}
-.rating.good{background: transparent url('../images/assets/goodBkg.png') no-repeat center center;}
-.rating.average{background: transparent url('../images/assets/averageBkg.png') no-repeat center center;}
-.rating.poor{background: transparent url('../images/assets/poorBkg.png') no-repeat center center;}
-.rating.unknown{background: transparent url('../images/assets/unknownBkg.png') no-repeat center center;}
-.rating span{
-	display: block;
-	padding-left: 15px;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 16px;
-}
-.rating .rating-text{
+#ingredient{margin-bottom: 50px;}
+.ingredient-name{
+	font-size: 20px;
 	font-weight: 700;
-	text-transform: uppercase;
+	line-height: 28px;
 }
+.ingredient-function{
+	color: #666;
+	font-size: 16px;
+	font-weight: 400;
+}
+.ingredient-irr, .ingredient-com{
+	float: left;
+	margin-right: 40px;
+}
+.ingredient-irr strong, .ingredient-com strong{margin-right: 6px;}
+.ingredient-desc{
+	clear: both;
+	padding-top: 40px;
+	line-height: 22px;
+}
+#ingredient .rating{margin: 40px 0 10px;}
+#ingredient-list{margin-bottom: 40px;}
+#ingredient-list ul{
+	margin: 0 15px 25px 0;
+	border-top: 1px solid #ccc;
+}
+#ingredient-list ul li{
+	border: 1px solid #ccc;
+	border-top: 0;
+	font-size: 14px;
+}
+#ingredient-list ul li.active{background-color: #eee;}
+#ingredient-list ul li:hover{
+	background-color: #eee;
+	cursor: pointer;
+}
+#ingredient-list ul li a, #ingredient-list ul li a:visited, #ingredient-list ul li a:hover{
+	display: block;
+	padding: 12px 0 12px 12px;
+	color: #363636;
+	text-decoration: none;
+}
+#ingredient-list ul li.active a{font-weight: 700;}
 
 
+
+/*---------------------------------------
+  INGREDIENT LIST STYLES
+---------------------------------------*/
 #ingredients{
-	padding-top: 20px;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	margin-bottom: 50px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;	
+}
+#ingredients .row{
+	margin: 0px;
+	border-bottom: 1px solid #ccc;
+}
+#ingredients .ingredient{
+	padding: 15px 15px 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;	
+}
+#ingredients .ingredient{border-right: 1px solid #ccc;}
+#ingredients .ingredient.omega{border-right: 0;}
+#ingredients .ingredient.column{
+	width: 33.33% !important;
+	margin: 0;
+}
+#ingredients .rating{
+	float: right;
+	margin: 0 -15px 10px 0;
+}
+#ingredients .ingredient-name{
+	width: 50%;
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
+}
+#ingredients a, #ingredients a:visited{
+	color: #363636;
+	text-decoration: none;
+}
+#ingredients a:hover{text-decoration: underline;}
+
+
+/*---------------------------------------
+  SKIN TYPE STYLES
+---------------------------------------*/
+#skinTypes{margin-bottom: 40px;}
+#skinTypes h4{padding-top: 5px;}
+#skinTypes ul{
+	margin: 26px 15px 25px 0;
+	border-top: 1px solid #ccc;
+}
+#skinTypes ul li{
+	border: 1px solid #ccc;
+	border-top: 0;
+	font-size: 14px;
+}
+#skinTypes ul li.active{background-color: #eee;}
+#skinTypes ul li:hover{
+	background-color: #eee;
+	cursor: pointer;
+}
+#skinTypes ul li a, #skinTypes ul li a:visited, #skinTypes ul li a:hover{
+	display: block;
+	padding: 12px 0 12px 12px;
+	color: #363636;
+	text-decoration: none;
+}
+#skinTypes ul li.active a{font-weight: 700;}
+
+
+/*---------------------------------------
+  REVIEW STYLES
+---------------------------------------*/
+#reviews{
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	margin-bottom: 50px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;	
+}
+#reviews .row{
+	margin: 0px;
+	border-bottom: 1px solid #ccc;
+}
+#reviews .review{
+	padding: 15px 15px 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;	
+}
+#reviews .user-name{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
+}
+#reviews .user-skin-type{
+	color: #666;
+	font-size: 16px;
+	font-weight: 400;
+}
+#reviews .review-text{
+	padding-top: 10px;
+	line-height: 22px;
 }
 
 
@@ -339,12 +499,15 @@ a.button-secondary:hover{
 		position: relative;
 	}
 	#products .product.columns{width: 556px !important;}
-	#products .product.omega{border-left: 0;}
+	#products .product.alpha{border-right: 0;}
 	#products .product-rating{position: absolute; bottom: 20px;}
-	#products .product-reviews{
-		position: absolute; bottom: 20px; right: 15px;
+	#products .product-links{
+		position: absolute; bottom: 10px; right: 20px;
 		margin-left: 0;
 	}
+
+	/* Ingredient list styles */
+	#ingredients h2{word-wrap: break-word}
 
 }
 
@@ -355,6 +518,9 @@ a.button-secondary:hover{
 -------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
+	/* Search bar styles */
+	header h1.eight.columns, header div.eight.columns{width: 50% !important;}
+
 	/* Product list styles */
 	#products .row{
 		border-bottom: 0;
@@ -365,17 +531,32 @@ a.button-secondary:hover{
 		position: relative;
 	}
 	#products .product.columns{width: 420px !important;}
-	#products .product.omega{border-left: 0;}
-	#products .product-rating{position: absolute; bottom: 20px;}
-	#products .product-reviews{
-		position: absolute; bottom: 15px; right: 15px;
+	#products .product.alpha{border-right: 0;}
+	#products .product-links{
+		position: absolute; bottom: 10px; right: 20px;
 		margin-left: 0;
 	}
 
 	/* Product page styles */
+	#product{margin-bottom: 20px;}
 	#product-ingredients{border-right: 0;}
 	#product-reviews{border-top: 1px solid #ccc;}
+	#product-ingredients, #product-reviews{
+		height: auto;
+		position: static;
+	}
+	#product-ingredients a.button-secondary, #product-reviews a.button-secondary{
+		position: static;
+		margin: 20px 0 0;
+	}
 
+	/* Ingredient list styles */
+	#ingredients .ingredient.column{width: 420px !important;}
+	#ingredients .row{border-bottom: 0;}
+	#ingredients .ingredient{border-bottom: 1px solid #ccc;}
+
+	/* Ingredient page styles */
+	#ingredient-list ul{margin: 20px 15px 0 0;}
 }
 
 
@@ -385,6 +566,20 @@ a.button-secondary:hover{
 ---------------------------------------*/
 @media only screen and (max-width: 479px) {
 	
+	/* Search bar styles */
+	#search{
+		margin: 10px 0 15px;
+		text-align: left;
+	}
+	#search input[type=submit]{
+	    background: url('../images/assets/searchBtn.png') no-repeat;
+	    cursor:pointer;
+	    width: 23px;
+	    height: 24px;
+	    margin-left: 5px;
+	    border: none;
+	}
+
 	/* Product list styles */
 	#products .row{
 		border-bottom: 0;
@@ -395,15 +590,30 @@ a.button-secondary:hover{
 		position: relative;
 	}
 	#products .product.columns{width: 300px !important;}
-	#products .product.omega{border-left: 0;}
-	#products .product-rating{position: absolute; bottom: 20px;}
-	#products .product-reviews{
-		position: absolute; bottom: 15px; right: 15px;
+	#products .product.alpha{border-right: 0;}
+	#products .product-links{
+		position: absolute; bottom: 10px; right: 20px;
 		margin-left: 0;
 	}
 
 	/* Product page styles */
+	#product{margin-bottom: 20px;}
 	#product-ingredients{border-right: 0;}
 	#product-reviews{border-top: 1px solid #ccc;}
-	
+	#product-ingredients, #product-reviews{
+		height: auto;
+		position: static;
+	}
+	#product-ingredients a.button-secondary, #product-reviews a.button-secondary{
+		position: static;
+		margin: 20px 0 0;
+	}
+
+	/* Ingredient list styles */
+	#ingredients .ingredient.column{width: 300px !important;}
+	#ingredients .row{border-bottom: 0;}
+	#ingredients .ingredient{border-bottom: 1px solid #ccc;}
+
+	/* Ingredient page styles */
+	#ingredient-list ul{margin: 20px 15px 0 0;}
 }

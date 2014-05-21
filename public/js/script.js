@@ -55,6 +55,16 @@ $(document).ready(function(){
 		}
 	});
 
+
+	//clear skin type param when user clicks on "all skin types"
+	$("#clear-skin-types").click(function(e) {
+
+		e.preventDefault(); //prevent page reload
+
+		var updatedURL = removeQueryParams(window.location.href, 'skin_type'); //create new URL
+		window.location.replace(updatedURL); //load new URL	
+	});
+
 });
 
 
